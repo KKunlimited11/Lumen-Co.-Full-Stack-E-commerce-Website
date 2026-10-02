@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen & Co. — Curated Everyday Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="logo" href="#shop">Lumen <span>& Co.</span></a>
+      <nav class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#story">Our story</a>
+        <a href="#shop">New arrivals</a>
+      </nav>
+      <div class="nav-actions">
+        <button
+          class="cart-btn"
+          id="openCart"
+          type="button"
+          aria-label="Open cart"
+        >
+          Cart <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Autumn edit · 2026</div>
+        <h1>Objects made for quieter days.</h1>
+        <p>
+          A small shop of useful, beautiful things — headphones, notebooks,
+          lamps, and gear chosen for everyday life.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#shop">Browse the collection</a>
+          <a class="btn btn-ghost" href="#why-lumen">Why Lumen</a>
+        </div>
+      </div>
+    </section>
+
+   <section class="featured">
+  <div class="featured-heading">
+    <div class="eyebrow">Curated for you</div>
+
+    <h2>Made for the everyday.</h2>
+
+    <p>
+      Simple pieces chosen to make everyday moments a little better.
+    </p>
+  </div>
+
+  <div class="featured-grid">
+
+    <a href="#shop" class="featured-card">
+      <div class="featured-image listen">
+        <img
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80"
+          alt="Person shopping in a modern store"
+        />
+      </div>
+
+      <div class="featured-content">
+        <span>01</span>
+        <h3>Listen</h3>
+        <p>Headphones and audio gear for quieter moments.</p>
+      </div>
+    </a>
+
+
+    <a href="#shop" class="featured-card">
+      <div class="featured-image carry">
+        <img
+          src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80"
+          alt="Person shopping in a modern store"
+        />
+      </div>
+
+      <div class="featured-content">
+        <span>02</span>
+        <h3>Carry</h3>
+        <p>Useful everyday pieces made to go with you.</p>
+      </div>
+    </a>
+
+
+    <a href="#shop" class="featured-card">
+      <div class="featured-image home">
+        <img
+          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1400&q=80"
+          alt="Person choosing products while shopping"
+        />
+      </div>
+
+      <div class="featured-content">
+        <span>03</span>
+        <h3>Home</h3>
+        <p>Small objects that bring comfort to your space.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+
+    <main class="wrap" id="shop">
+      <div class="section-head">
+        <h2>The collection</h2>
+        <p>
+          Products load from <code>js/data.js</code> for now. Point
+          <code>js/api.js</code> at your backend when it is ready.
+        </p>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="toolbar">
+        <input
+          class="search"
+          id="search"
+          type="search"
+          placeholder="Search products..."
+        />
+        <select class="sort" id="sort" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="status" id="status" hidden></p>
+
+
+      <section class="why-lumen" id="why-lumen">
+  <div class="why-heading">
+    <div class="eyebrow">Why Lumen</div>
+    <h2>Less, but better.</h2>
+    <p>
+      We keep the collection small so every piece has a reason to be here.
+    </p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <span>01</span>
+      <h3>Thoughtfully chosen</h3>
+      <p>
+        A focused collection of useful objects instead of endless choices.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <span>02</span>
+      <h3>Made for everyday</h3>
+      <p>
+        Simple products designed to fit naturally into everyday routines.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <span>03</span>
+      <h3>Simple shopping</h3>
+      <p>
+        Browse, choose what you like, and place your order without the clutter.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+      <section class="story" id="story">
+        <div class="story-copy">
+          <div class="eyebrow">The house</div>
+          <h2>A shop with a short list.</h2>
+          <p>
+            Lumen & Co. is a demo storefront. The pages, styles, and scripts are
+            split so a real catalog, cart, and checkout API can replace the
+            local sample data.
+          </p>
+          <div class="stats">
+            <div><strong id="statCount">12</strong><span>products</span></div>
+            <div><strong id="statCats">4</strong><span>categories</span></div>
+            <div><strong>Local</strong><span>data for now</span></div>
+          </div>
+        </div>
+        <div
+          class="story-photo"
+          role="img"
+          aria-label="People browsing a bright clothing shop"
+        ></div>
+      </section>
+
+      <section class="newsletter">
+  <div class="newsletter-content">
+    <div class="eyebrow">Stay in the loop</div>
+
+    <h2>Good things, occasionally.</h2>
+
+    <p>
+      New arrivals, thoughtful finds, and little updates from Lumen & Co.
+    </p>
+
+    <form class="newsletter-form" id="newsletter-form">
+      <input
+        type="email"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      />
+
+      <button type="submit">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+
+    </main>
+
+    <footer>
+      <div>Lumen & Co. · Demo storefront</div>
+      <div>Frontend only. Checkout calls <code>api.placeOrder</code>.</div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Shopping cart">
+      <div class="drawer-head">
+        <h3>Your bag</h3>
+        <button class="icon-btn" id="closeCart" type="button">Close</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+     <div class="drawer-foot">
+  <div class="total">
+    <span>Total</span><strong id="cartTotal">₦0</strong>
+  </div>
+
+  <div class="checkout-form">
+    <input type="text" id="customerName" placeholder="Your name" />
+    <input type="tel" id="customerPhone" placeholder="Phone number" />
+    <textarea id="customerAddress" placeholder="Delivery address"></textarea>
+  </div>
+
+  <button class="btn btn-ink checkout" id="checkout" type="button">
+    Place Order
+  </button>
+</div>
+    </aside>
+
+    <div class="modal" id="modal">
+      <div class="modal-card">
+        <button
+          class="close-x"
+          id="closeModal"
+          type="button"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <div class="modal-photo" id="modalPhoto"></div>
+        <div class="modal-info">
+          <div class="cat" id="modalCat"></div>
+          <h3 id="modalName"></h3>
+          <p id="modalDesc"></p>
+          <div class="price" id="modalPrice"></div>
+          <button class="btn btn-ink" id="modalAdd" type="button">
+            Add to bag
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script src="data.js"></script>
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
