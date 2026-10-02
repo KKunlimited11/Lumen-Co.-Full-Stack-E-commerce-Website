@@ -7,7 +7,7 @@ const state = {
   activeProduct: null
 };
 
-const IMAGE_BASE = "http://localhost:3000";
+const IMAGE_BASE = "https://lumen-co-full-stack-e-commerce-website.onrender.com";
 
 const els = {
   grid: document.getElementById("grid"),
