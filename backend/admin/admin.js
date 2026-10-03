@@ -199,7 +199,7 @@ productList.addEventListener("click", async (event) => {
 
 
 async function loadOrders() {
-  const response = await fetch("http://localhost:3000/api/orders");
+  const response = await fetch("https://lumen-co-full-stack-e-commerce-website.onrender.com/api/orders");
   const data = await response.json();
 
   const ordersList = document.getElementById("ordersList");
@@ -258,7 +258,7 @@ document.getElementById("ordersList").addEventListener("change", async (event) =
   const status = event.target.value;
 
   const response = await fetch(
-    "http://localhost:3000/api/orders/" + orderId + "/status",
+    "https://lumen-co-full-stack-e-commerce-website.onrender.com/api/orders/" + orderId + "/status",
     {
       method: "PATCH",
       headers: {
@@ -285,7 +285,7 @@ document.getElementById("ordersList").addEventListener("click", async (event) =>
   if (!confirm("Delete this order?")) return;
 
   const response = await fetch(
-    "http://localhost:3000/api/orders/" + orderId,
+    "https://lumen-co-full-stack-e-commerce-website.onrender.com/api/orders/" + orderId,
     {
       method: "DELETE"
     }
@@ -300,7 +300,7 @@ document.getElementById("ordersList").addEventListener("click", async (event) =>
 
 
 async function loadSubscribers() {
-  const response = await fetch("http://localhost:3000/api/subscribers");
+  const response = await fetch("https://lumen-co-full-stack-e-commerce-website.onrender.com/api/subscribers");
   const data = await response.json();
 
   const subscribersList = document.getElementById("subscribersList");
@@ -336,7 +336,7 @@ document.getElementById("subscribersList").addEventListener("click", async (even
   if (!confirm("Delete this subscriber?")) return;
 
   const response = await fetch(
-    "http://localhost:3000/api/subscribers/" + button.dataset.id,
+    "https://lumen-co-full-stack-e-commerce-website.onrender.com/api/subscribers/" + button.dataset.id,
     {
       method: "DELETE"
     }
